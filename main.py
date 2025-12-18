@@ -34,6 +34,9 @@ from services.github_analyzer_service import GitHubAnalyzerService
 from services.github_architecture_service import GitHubArchitectureService
 from services.github_pdf_service import GitHubPDFService
 
+# Create required directories
+os.makedirs("generated_pdfs", exist_ok=True)
+
 # Initialize rate limiter
 limiter = Limiter(key_func=get_remote_address)
 
